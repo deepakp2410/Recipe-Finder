@@ -1,0 +1,209 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style with Food-Themed Background */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877dfd2a3c2?fit=crop&w=1350&h=650') no-repeat center center fixed;
+    background: linear-gradient(135deg, #f4e1d2, #f8c4a8);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    background-size: cover;
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Overlay for Better Readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    z-index: -1;
+}
+
+/* Container Style */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for the content */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+h1 {
+    font-size: 2rem;
+    color: #FF6347; /* Tomato color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Search Container */
+.search-container {
+    margin-bottom: 20px;
+}
+
+/* Input and Button Style */
+input[type="text"], button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff; /* Subtle blue color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Recipe Container Style */
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Recipe Box Style */
+.recipe-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.recipe-box img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.recipe-box h3 {
+    font-size: 1.1rem;
+    color: #FF6347; /* Tomato color */
+    margin-bottom: 8px;
+}
+
+.recipe-box p {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.recipe-box a {
+    color: #FF6347; /* Tomato color */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.recipe-box a:hover {
+    text-decoration: underline;
+}
+
+/* Recipe Details Page Styles */
+#recipeDetails {
+    margin-top: 20px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#recipeDetails img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%; /* Center the image and limit width */
+    height: auto;
+    border-radius: 8px;
+}
+
+#recipeDetails h2 {
+    color: #FF6347; /* Tomato color */
+    margin-bottom: 10px;
+}
+
+#recipeDetails h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#recipeDetails ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#recipeDetails p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .recipe-box {
+        flex: 1 1 calc(100% - 20px);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
